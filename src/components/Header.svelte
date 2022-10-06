@@ -46,7 +46,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 1.5rem 4.5vw 4rem;
+        padding: 1.5rem 4.5vw 5rem;
     }
 
 

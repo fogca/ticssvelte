@@ -1,7 +1,8 @@
 <script>
-	import sal from 'sal.js'
-	
-	import Header from '../components/Header.svelte'
+	import sal from 'sal.js';
+	import Header from '../components/Header.svelte';
+	import Arrow from '../components/Arrow.svelte';
+
 	/** @type {import('./$types').PageData} */
 	export let data;
 
@@ -31,9 +32,6 @@
 			<h2 class="h7"></h2>
 		</div>
 	</section>
-
-
-
 	
 	<section id="index-projects">
 		<div class="l-section-head" data-sal="fade" style="--sal-duration: 2s;">
@@ -53,20 +51,28 @@
 	{/if}
 	</section>
 
+
 	<section id="index-words">
 		<div class="l-section-head">
-			<h1 class="h5" lang="en">Words</h1>
-			<h2 class="h4">日々のことば・考え</h2>
+			<h1 class="h1" lang="en">Words</h1>
+			<h2 class="h6">文章: 学びと考え</h2>
 		</div>
 		{#if data[1].contents}
 		<div class="wrapper">
 			{#each data[1].contents as content}
 				<a href="/posts/{content.id}/" data-sveltekit-prefetch class="container">
-	                <img src={content.thumbnail.url} class="thumbnail" alt="{content.title}">
-					<h2 class="p">{content.title}</h2>
+					<div class="left">
+						<div class="l-line"></div>
+						<div class="h6 date">{ content.date }</div>
+						<h1 class="h5">{ content.title }</h1>
+					</div>
+					<div class="right">
+						<Arrow />
+					</div>
 				</a>
 			{/each}
 		</div>
+		<div class="l-line"></div>
 	{/if}
 	</section>
 	
@@ -147,6 +153,9 @@
 
 .l-cards .l-card .description {opacity: .5;}
 .l-cards .l-card h1 {font-size: 1.35rem;}
+
+
+
 #index-words {
 	margin-top: 10rem;
 	padding-top: 8rem;
@@ -154,24 +163,29 @@
 	background-color: var(--darkColor);
 }
 #index-words * {color: white;}
-#index-words .wrapper {
-	width: 100vw;
-	margin-top: 4rem;
-	margin-left: -6.5vw;
-	padding-left: 6.5vw;
+
+
+#index-words .wrapper {margin-top: 5rem;}
+#index-words .wrapper a {
+	width: 100%;
 	display: flex;
-	white-space: nowrap;
-	-webkit-overflow-scrolling: touch;
-	overflow-x: scroll;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0 1rem 2rem;
 }
-#index-words .wrapper a.container {
-	display: block;
-	width: 60vw;
-	margin-right: 3rem;
-	
+#index-words .wrapper a .l-line {
+	margin-left: -1rem;
+    margin-bottom: 2.2rem;
 }
-#index-words .wrapper .container img {aspect-ratio: 1/1;}
-#index-works {margin-top: 8rem;}
+
+#index-words .wrapper a .left {width: 75%;}
+#index-words .wrapper a .right {
+	display: flex;
+    align-items: flex-end;
+	margin-bottom: -0.5rem;
+}
+#index-words .wrapper a .date {margin-bottom: .8rem;}
+
 
 
 

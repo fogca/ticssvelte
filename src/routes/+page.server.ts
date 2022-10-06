@@ -10,6 +10,7 @@ type Post = {
 	revisedAt: string;
 	description: string;
 	thumbnail: string;
+	date: string;
 	url: string;
 	content: string;
 	title: string;
@@ -26,7 +27,7 @@ export async function load() {
 		}),
 		client.get<MicroCMSListResponse<Post>>({
 			endpoint: 'words',
-			queries: { limit: 4 }, 
+			queries: { limit: 5 }, 
 		}),
 		client.get<MicroCMSListResponse<Post>>({
 			endpoint: 'archives',

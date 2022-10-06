@@ -20,6 +20,12 @@
     opacity: 1;
 }
 */
+.l-line {
+    width: 100vw;
+    height: .05px;
+    background-color: #aaa;
+    opacity: .25;
+}
 
 .js-scroll {
     opacity: 0;

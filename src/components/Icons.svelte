@@ -44,6 +44,7 @@
     align-items: center;
     margin-bottom: 1.5rem;
 }
+.icons .icon:nth-of-type(4) {margin-bottom: 0;}
 
 .icons .icon svg {width: 65%;}
 .icons .icon:nth-of-type(1) svg {width: 68%;}
