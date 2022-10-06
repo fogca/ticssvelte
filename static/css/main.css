@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+/*
+#index-first *,
+#index-second *,
+#index-third *,
+#index-fourth * {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateY(10px);
+    transition: 2.8s cubic-bezier(.4,.1,.1,1);
+    will-change: transform, opacity, filter;
+}
+#index-first.visible *,
+#index-second.visible *,
+#index-third.visible *,
+#index-fourth.visible * {
+    filter: blur(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+*/
+
+.js-scroll {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 2.5s cubic-bezier(.4,.1,.1,1);
+}
+.js-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+header svg path {fill: var(--backgroundColor);}
+header .menu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.5rem;
+}
+header .menu a {
+    writing-mode: vertical-rl;
+    font-size: 1.6rem;
+    color: var(--backgroundColor);
+    margin-bottom: 3.5rem;
+}
+
+footer .footer-logo .Logo {width: 70vw !important;}
+
+main {
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: var(--backgroundColor);
+    background-blend-mode: lighten;
+    /*
+    background-image: url("../image/bg.webp");
+    */
+}
+
+section {padding: 0 5vw;}
+
+.section-head {margin-bottom: 3rem;}
+.section-head h1 {margin: 1rem 0;}
+
+
+
+  
