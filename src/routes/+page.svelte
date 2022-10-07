@@ -1,6 +1,5 @@
 <script>
 	import sal from 'sal.js';
-	import Header from '../components/Header.svelte';
 	import Arrow from '../components/Arrow.svelte';
 
 	/** @type {import('./$types').PageData} */
@@ -20,9 +19,6 @@
 	
 	
 </svelte:head>
-
-
-<Header />
 
 <main>
 	<section id="index-top">

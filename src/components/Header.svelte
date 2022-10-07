@@ -1,8 +1,34 @@
 <script>
-    import { browser } from '$app/environment';
+    //import { browser } from '$app/environment';
+    import { onMount } from 'svelte';
     import Logo from './Logo.svelte';
     import Icons from './Icons.svelte';
 
+    onMount(() => {
+        const headerJS = document.querySelector(".SvelteHeader");
+        function scrollCheck() {
+        	let rect = headerJS.getBoundingClientRect();
+        	let y = rect.top + window.pageYOffset;
+        	if (y < 500) {
+        	    headerJS.classList.add('top');
+        	} else {
+        	    headerJS.classList.remove('top');
+        	}
+        }
+    });
+    /*
+    onMount(() => {
+        
+        window.addEventListener('scroll', scrollCheck);
+        scrollCheck();
+        
+    });
+    */
+
+
+
+
+    /*
     if (browser) {
         window.addEventListener( "scroll", function() {
     	    let header = document.querySelector("header");
@@ -15,22 +41,31 @@
     	    }
 	    });
     }
+    */
 	
 </script>
 
-<header class="top">
-    <div class="head">
-        <div class="logo"><Logo /></div>
-        <div class="line"></div>
-    </div>
-</header>
+<svelte:window on:scroll={scrollCheck} />
 
-<nav class="fixer">
-    <div class="button h6">Menu</div>
-    <div class="icons-wrapper">
-        <Icons />
-    </div>
-</nav>
+<div class="SvelteHeader">
+
+    <header class="top">
+        <div class="head">
+            <div class="logo"><Logo /></div>
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <nav class="fixer">
+        <div class="button h6">Menu</div>
+        <div class="icons-wrapper">
+            <Icons />
+        </div>
+    </nav>
+    
+</div>
+
+
 
 <style>
 
