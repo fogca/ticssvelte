@@ -4,6 +4,7 @@
     import Logo from './Logo.svelte';
     import Icons from './Icons.svelte';
 
+    /*
     onMount(() => {
         const headerJS = document.querySelector(".SvelteHeader");
         function scrollCheck() {
@@ -16,6 +17,9 @@
         	}
         }
     });
+    */
+
+
     /*
     onMount(() => {
         
@@ -45,7 +49,7 @@
 	
 </script>
 
-<svelte:window on:scroll={scrollCheck} />
+<!--<svelte:window on:scroll={scrollCheck} />-->
 
 <div class="SvelteHeader">
 
