@@ -26,22 +26,22 @@
 
 <main>
 	<section id="index-top">
-		<img src="../image/kv.webp" alt="" class="kv" data-sal="fade">
-		<div class="info" data-sal="fade" style="--sal-duration: 5s;">
+		<img src="../image/kv.webp" alt="" class="kv">
+		<div class="info">
 			<h1 class="h1 js-reaveler" lang="en">Tokyo based Design and <br>Photography Studio led by <br>Visual Director, Takumi Isobe <br>also runs a non-al brand, Nar.</h1>
 			<h2 class="h7"></h2>
 		</div>
 	</section>
 	
 	<section id="index-projects">
-		<div class="l-section-head" data-sal="fade" style="--sal-duration: 2s;">
+		<div class="l-section-head">
 			<h1 class="h1 js-reaveler" lang="en">Projects I've involved</h1>
 			<h2 class="h6">携わらせていただいたお仕事</h2>
 		</div>
 	{#if data[0].contents}
 		<div class="wrapper l-cards">
 			{#each data[0].contents as content}
-				<a href="/posts/{content.id}/" data-sveltekit-prefetch class="container l-card" data-sal="fade" style="--sal-duration: 2s;">
+				<a href="/projects/{content.id}/" data-sveltekit-prefetch class="container l-card">
 	                <img src={content.thumbnail.url} class="thumbnail" alt="{content.title}">
 					<div class="h6 description" lang="en">{content.description}</div>
 					<h1 class="h6" lang="en">{@html content.title}</h1>
@@ -54,16 +54,16 @@
 
 	<section id="index-words">
 		<div class="l-section-head">
-			<h1 class="h1" lang="en" data-sal="fade" style="--sal-duration: 2.5s;">Words</h1>
-			<h2 class="h6" data-sal="fade" style="--sal-duration: 2.5s;">文章: 学びと考え</h2>
+			<h1 class="h1" lang="en">Words</h1>
+			<h2 class="h6">文章: 学びと考え</h2>
 		</div>
 		{#if data[1].contents}
 		<div class="wrapper l-words">
 			{#each data[1].contents as content}
-				<a href="/posts/{content.id}/" data-sveltekit-prefetch class="l-word container" data-sal="fade" style="--sal-duration: 2.5s;">
+				<a href="/words/{content.id}/" data-sveltekit-prefetch class="l-word container">
 					<div class="left">
 						<div class="l-line"></div>
-						<div class="h6 date">{ content.date }</div>
+						<div class="h6 date" lang="en">{ content.date }</div>
 						<h1 class="h5">{ content.title }</h1>
 					</div>
 					<div class="right">
@@ -74,7 +74,7 @@
 		</div>
 		<div class="l-line"></div>
 		{/if}
-		<a href="/words" class="h1 all">All articles</a>
+		<a href="/words" class="h2 all" lang="en">All articles</a>
 	</section>
 	
 </main>

@@ -39,6 +39,20 @@
 
 
 
+/* Archives/slug */
+/* Archives/slug */
+/* Archives/slug */
+/* Archives/slug */
+/* Archives/slug */
+article.slug * {color: var(--backgroundColor);}
+article.slug p p {text-align: justify;}
+article.slug .credit * {font-size: 1.5rem;}
+article.slug .work {font-size: 1.5rem;}
+
+
+
+
+
 
 header svg path {fill: var(--backgroundColor);}
 header .menu {

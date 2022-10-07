@@ -5,16 +5,13 @@ import type { MicroCMSObjectContent } from 'microcms-js-sdk';
 type Post = {
 	id: string;
 	title: string;
-	content: string;
-
 	description: string;
+	introduction: HTMLElement;
 	thumbnail: string;
-	work: string;
-	client: string;
-	link: string;
 	body: HTMLElement;
-	html: HTMLElement;
-	
+	credit: HTMLElement;
+	direction: string;
+	work: string;
 };
 type Props = {
 	params: {
@@ -24,7 +21,7 @@ type Props = {
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function load({ params }: Props) {
 	const res = await client.get<MicroCMSObjectContent & Post>({
-		endpoint: 'works',
+		endpoint: 'words',
 		contentId: params.slug
 	});
 	if (res) {

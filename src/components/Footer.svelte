@@ -46,7 +46,7 @@ import Logo from './Logo.svelte'
     
     ul {margin-bottom: 12rem;}
 
-    footer ul.links li {margin-bottom: 2rem;}
+    footer ul.links li {margin-bottom: .2rem;}
     footer ul.links li:nth-of-type(4) {margin-bottom: 4rem;}
     footer ul.links li.contact {margin-bottom: 2.4rem;}
     footer ul.links li a {font-size: 2.4rem;}
