@@ -27,7 +27,7 @@
 <main>
 	<section id="index-top">
 		<img src="../image/kv.webp" alt="" class="kv" data-sal="fade">
-		<div class="info" data-sal="fade" style="--sal-duration: 5s;--sal-delay: 1s;">
+		<div class="info" data-sal="fade" style="--sal-duration: 5s;">
 			<h1 class="h1 js-reaveler" lang="en">Tokyo based Design and <br>Photography Studio led by <br>Visual Director, Takumi Isobe <br>also runs a non-al brand, Nar.</h1>
 			<h2 class="h7"></h2>
 		</div>
@@ -54,13 +54,13 @@
 
 	<section id="index-words">
 		<div class="l-section-head">
-			<h1 class="h1" lang="en">Words</h1>
-			<h2 class="h6">文章: 学びと考え</h2>
+			<h1 class="h1" lang="en" data-sal="fade" style="--sal-duration: 2.5s;">Words</h1>
+			<h2 class="h6" data-sal="fade" style="--sal-duration: 2.5s;">文章: 学びと考え</h2>
 		</div>
 		{#if data[1].contents}
-		<div class="wrapper">
+		<div class="wrapper l-words">
 			{#each data[1].contents as content}
-				<a href="/posts/{content.id}/" data-sveltekit-prefetch class="container">
+				<a href="/posts/{content.id}/" data-sveltekit-prefetch class="l-word container" data-sal="fade" style="--sal-duration: 2.5s;">
 					<div class="left">
 						<div class="l-line"></div>
 						<div class="h6 date">{ content.date }</div>
@@ -73,7 +73,8 @@
 			{/each}
 		</div>
 		<div class="l-line"></div>
-	{/if}
+		{/if}
+		<a href="/words" class="h1 all">All articles</a>
 	</section>
 	
 </main>
@@ -157,34 +158,20 @@
 
 
 #index-words {
-	margin-top: 10rem;
+	margin-top: 12rem;
 	padding-top: 8rem;
-	padding-bottom: 6rem;
+	padding-bottom: 12rem;
 	background-color: var(--darkColor);
 }
 #index-words * {color: white;}
-
-
 #index-words .wrapper {margin-top: 5rem;}
-#index-words .wrapper a {
-	width: 100%;
+#index-words .all {
+	margin-top: 3rem;
+    margin-left: 1rem;
+    text-decoration: underline;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	padding: 0 1rem 2rem;
+    align-items: center;
 }
-#index-words .wrapper a .l-line {
-	margin-left: -1rem;
-    margin-bottom: 2.2rem;
-}
-
-#index-words .wrapper a .left {width: 75%;}
-#index-words .wrapper a .right {
-	display: flex;
-    align-items: flex-end;
-	margin-bottom: -0.5rem;
-}
-#index-words .wrapper a .date {margin-bottom: .8rem;}
 
 
 

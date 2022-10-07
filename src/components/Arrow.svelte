@@ -5,8 +5,8 @@
 </div>
 
 <style>
-    .Arrow {
-        width: 3.4rem;
-    }
+    .Arrow {width: 3.4rem;}
+
+    #index-words .all .Arrow svg {width: 3.5rem;}
 </style>
   

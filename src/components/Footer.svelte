@@ -31,14 +31,18 @@ import Logo from './Logo.svelte'
 <style>
     footer {
         width: 100vw;
-        padding: 8rem 5vw 5rem;
+        padding: 0 5vw 5rem;
         background-color: var(--darkColor);
     }
     footer * {
         color: var(--backgroundColor);
         fill: var(--backgroundColor);
     }
-    footer .footer-logo {margin-bottom: 8rem;}
+    footer .l-line {
+        margin-bottom: 6rem;
+        margin-left: -5vw;
+    }
+    footer .footer-logo {margin-bottom: 5rem;}
     
     ul {margin-bottom: 12rem;}
 

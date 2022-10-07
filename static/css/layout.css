@@ -1,0 +1,18 @@
+.l-word {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0 1rem 2rem;
+}
+.l-word .l-line {
+	margin-left: -1rem;
+    margin-bottom: 2.2rem;
+}
+.l-word .left {width: 75%;}
+.l-word .right {
+	display: flex;
+    align-items: flex-end;
+	margin-bottom: -0.5rem;
+}
+.l-word .date {margin-bottom: .8rem;}
