@@ -1,51 +1,49 @@
 <script>
-    //import { browser } from '$app/environment';
+    import { browser } from '$app/environment';
     import { onMount } from 'svelte';
+    import { slide } from 'svelte/transition';
     import Logo from './Logo.svelte';
+    import Menu from './Menu.svelte';
     import Icons from './Icons.svelte';
 
-    /*
-    onMount(() => {
-        const headerJS = document.querySelector(".SvelteHeader");
-        function scrollCheck() {
-        	let rect = headerJS.getBoundingClientRect();
-        	let y = rect.top + window.pageYOffset;
-        	if (y < 500) {
-        	    headerJS.classList.add('top');
-        	} else {
-        	    headerJS.classList.remove('top');
-        	}
-        }
-    });
-    */
-
+	let isExpanded = false
+	function clickHandler() {
+		isExpanded = !isExpanded  
+    }
 
     /*
-    onMount(() => {
-        
-        window.addEventListener('scroll', scrollCheck);
-        scrollCheck();
-        
-    });
-    */
+    onMount() {
 
+    function handle(event) {
+        event.preventDefault();
+    };
 
-
-
-    /*
-    if (browser) {
-        window.addEventListener( "scroll", function() {
-    	    let header = document.querySelector("header");
-    	    let rect = header.getBoundingClientRect();
-    	    let y = rect.top + window.pageYOffset;
-    	    if (y < 500) {
-    	        header.classList.add('top');
-    	    } else {
-    	        header.classList.remove('top');
-    	    }
-	    });
+    if (isExpanded = true) {
+        document.addEventListener('touchmove', handle, { passive: false });
+        document.addEventListener('mousewheel', handle, { passive: false });
+    } else {
+        document.removeEventListener('touchmove', handle, { passive: false });
+        document.removeEventListener('mousewheel', handle, { passive: false });
+    }
     }
     */
+
+    
+
+    
+
+
+
+        /*
+        if (isExpanded = false) {
+            document.addEventListener('touchmove', clickHandler, { passive: false });
+            document.addEventListener('mousewheel', clickHandler, { passive: false });
+        } else {
+            document.removeEventListener('touchmove', clickHandler);
+            document.removeEventListener('wheel', clickHandler);
+        }
+        */
+	
 	
 </script>
 
@@ -61,11 +59,18 @@
     </header>
 
     <nav class="fixer">
-        <div class="button h6">Menu</div>
+        
+        <div class="button h6" on:click|preventDefault={clickHandler}>
+            Menu
+        </div>
         <div class="icons-wrapper">
             <Icons />
         </div>
     </nav>
+
+    {#if isExpanded}
+    <Menu />
+    {/if}
     
 </div>
 
@@ -95,7 +100,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 99;
+        z-index: 96;
         transition: 2.5s ease-in-out;
         mix-blend-mode: difference;
         filter: contrast(2) brightness(1.5);

@@ -14,11 +14,7 @@ import Footer from '../components/Footer.svelte';
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/layout.css">
   <link rel="stylesheet" href="https://use.typekit.net/frp6udl.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sal.js@0.8.5/dist/sal.css">
   <script src="https://webfont.fontplus.jp/accessor/script/fontplus.js?kqbwQX--jVA%3D&box=Bgw26CBfLFk%3D&aa=1&ab=2"></script>
-  <script src="https://unpkg.com/colcade@0/colcade.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sal.js@0.8.5/dist/sal.min.js"></script>
-
 </svelte:head>
   
   <div 

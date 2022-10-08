@@ -11,13 +11,6 @@
 
 <svelte:head>
 	<title>磯部たくみ | a Brand Director</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/base.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sal.js@0.8.5/dist/sal.css">
-	<script src="https://webfont.fontplus.jp/accessor/script/fontplus.js?kqbwQX--jVA%3D&box=6UDKdE7o7aE%3D&aa=1&ab=2"></script>
-	<script>sal({threshold: .5,});</script>
-	
-	
 </svelte:head>
 
 <main>
@@ -25,7 +18,7 @@
 		<img src="../image/kv.webp" alt="" class="kv">
 		<div class="info">
 			<h1 class="h1 js-reaveler" lang="en">Tokyo based Design and <br>Photography Studio led by <br>Visual Director, Takumi Isobe <br>also runs a non-al brand, Nar.</h1>
-			<h2 class="h7"></h2>
+			<h2 class="h6">デザインや写真といった視覚領域においてディレクションや<br>構築をさせていただいています。 よろしくお願いいたします！</h2>
 		</div>
 	</section>
 	
