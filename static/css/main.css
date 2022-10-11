@@ -37,7 +37,7 @@
     transform: translateY(0);
 }
 
-
+.Index {background-color: var(--backgroundColor);}
 
 /* Archives/slug */
 /* Archives/slug */
@@ -49,23 +49,32 @@ article.slug p p {text-align: justify;}
 article.slug .credit * {font-size: 1.5rem;}
 article.slug .work {font-size: 1.5rem;}
 
-
-
-
-
-
-header svg path {fill: var(--backgroundColor);}
-header .menu {
-    display: flex;
-    flex-direction: column;
-    padding-top: 1.5rem;
+.word-slug .body p {
+    font-size: 1.4rem;
+    line-height: 2.15;
+    text-align: justify;
+    width: 100%;
 }
-header .menu a {
-    writing-mode: vertical-rl;
-    font-size: 1.6rem;
-    color: var(--backgroundColor);
-    margin-bottom: 3.5rem;
+
+
+.Index .Menu .Logo {opacity: .25;}
+.About .Menu ul li:nth-of-type(2) {opacity: .25;}
+.Words .Menu ul li:nth-of-type(3) {opacity: .25;}
+.Word .icons {display: none;}
+
+.About header .line {display: none;}
+.About header .Logo {width: 100% !important;}
+.About nav.fixer {padding: 11.5rem 4.5vw 5rem !important;}
+.About nav.fixer .icons a.icon {
+    background-color: transparent;
+    border: 0.3px var(--backgroundColor) solid;
 }
+.About nav.fixer a.icon svg path {fill: var(--backgroundColor);}
+.About footer {
+    position: relative;
+    background-color: transparent !important;
+}
+
 
 footer .footer-logo .Logo {width: 70vw !important;}
 
@@ -80,7 +89,7 @@ main {
     */
 }
 
-section {padding: 0 5vw;}
+
 
 .section-head {margin-bottom: 3rem;}
 .section-head h1 {margin: 1rem 0;}

@@ -1,23 +1,41 @@
 <script>
+	import Arrow from '../../components/Arrow.svelte'
 	/** @type {import('./$types').PageData} */
 	export let data;
 </script>
 
 <svelte:head>
-	<title>Posts</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/base.css">
+	<title>Words | TICS: Takumi Isobe Creative Studio</title>
 </svelte:head>
-<h1>Posts</h1>
-{#if data.contents}
-	<ul>
-		{#each data.contents as content}
-			<li>
-				<a href="/posts/{content.id}/" data-sveltekit-prefetch>
-                    <img src={content.thumbnail.url} class="thumbnail" alt="{content.title}">
-					{content.title}
-				</a>
-			</li>
-		{/each}
-	</ul>
-{/if}
+
+<main class="dark-mode">
+<section class="words-index">
+	<h1 class="h0">Words</h1>
+	{#if data.contents}
+		<div class="wrapper l-words">
+			{#each data.contents as content}
+			<a href="/words/{content.id}/" data-sveltekit-prefetch class="l-word container">
+				<div class="left">
+					<div class="l-line"></div>
+					<div class="h6 date" lang="en">{ content.date }</div>
+					<h1 class="h5">{ content.title }</h1>
+				</div>
+				<div class="right">
+					<Arrow />
+				</div>
+			</a>
+			{/each}
+		</div>
+		<div class="l-line"></div>
+	{/if}
+</section>
+</main>
+
+<style>
+	.words-index {
+		padding-top: 15rem;
+		padding-bottom: 12rem;
+	}
+
+	
+</style>

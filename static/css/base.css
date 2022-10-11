@@ -5,7 +5,6 @@
     src: url('../font/TWKLausanne-300.woff2') format('woff2');    
 }
 
-
 :root {
     --backgroundColor: #F5F7F7;
     --textColor: #313308;
@@ -29,7 +28,7 @@ html {font-size: 62.5%;}
 html, body {
     width: 100vw;
     overflow-x: hidden;
-    background-color: var(--backgroundColor);
+    background-color: var(--darkColor);
 }
 
 /*GillSansMTPro-LightItalic / */
@@ -52,7 +51,7 @@ div, h1, h2, h3, h4, h5, h6, p, a, span, button {
     -webkit-font-smoothing: antialiased;
 }
 
-.h0 {font-size: 3.6rem;}
+.h0 {font-size: 3rem;}
 h1, .h1 {font-size: 2.4rem;}
 h2, .h2 {font-size: 2.0rem;}
 h3, .h3 {font-size: 1.8rem;}
@@ -101,9 +100,13 @@ main {
 .sp {display: none;}
 .pc {display: block;}
 
+section {padding: 0 5vw;}
+
 
 @media screen and (min-width: 720px) {
     html {font-size: 55%;}
+
+    section {padding: 0 12.5vw;}
 }
 
 @media only screen and (min-width: 481px) and (max-width: 720px) {
@@ -135,7 +138,7 @@ p, .p {
 
 @media screen and (max-width: 480px) {
     html {font-size: 62.5%;}
-    .h0 {font-size: 5.6rem;}
+    .h0 {font-size: 4rem;}
     h1, .h1 {font-size: 2.4rem;}
     h2, .h2 {font-size: 2.0rem;}
     h3, .h3 {font-size: 1.8rem;}

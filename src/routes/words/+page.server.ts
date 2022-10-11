@@ -3,13 +3,11 @@ import { client } from '../../libs/client';
 import type { MicroCMSListResponse } from 'microcms-js-sdk';
 type Post = {
 	id: string;
-	createdAt: string;
-	updatedAt: string;
-	publishedAt: string;
-	revisedAt: string;
+
 	title: string;
-	thumbnail: string;
+	date: string;
 	content: string;
+	url: string;
 };
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function load() {

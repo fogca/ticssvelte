@@ -20,6 +20,8 @@ import Footer from '../components/Footer.svelte';
   <div 
     class:Index={currentRoute === "/"} 
     class:Projects={currentRoute === "/projects"}
+    class:Words={currentRoute === "/words"}
+    class:Word={currentRoute === "/words/"}
     class:About={currentRoute === "/about"} 
     class:Contact={currentRoute === "/contact"}
   >

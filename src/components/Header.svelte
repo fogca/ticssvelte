@@ -1,49 +1,15 @@
 <script>
-    import { browser } from '$app/environment';
-    import { onMount } from 'svelte';
     import { slide } from 'svelte/transition';
+    
     import Logo from './Logo.svelte';
     import Menu from './Menu.svelte';
     import Icons from './Icons.svelte';
 
+    let clicked = false;
 	let isExpanded = false
 	function clickHandler() {
 		isExpanded = !isExpanded  
     }
-
-    /*
-    onMount() {
-
-    function handle(event) {
-        event.preventDefault();
-    };
-
-    if (isExpanded = true) {
-        document.addEventListener('touchmove', handle, { passive: false });
-        document.addEventListener('mousewheel', handle, { passive: false });
-    } else {
-        document.removeEventListener('touchmove', handle, { passive: false });
-        document.removeEventListener('mousewheel', handle, { passive: false });
-    }
-    }
-    */
-
-    
-
-    
-
-
-
-        /*
-        if (isExpanded = false) {
-            document.addEventListener('touchmove', clickHandler, { passive: false });
-            document.addEventListener('mousewheel', clickHandler, { passive: false });
-        } else {
-            document.removeEventListener('touchmove', clickHandler);
-            document.removeEventListener('wheel', clickHandler);
-        }
-        */
-	
 	
 </script>
 
@@ -53,15 +19,21 @@
 
     <header class="top">
         <div class="head">
-            <div class="logo"><Logo /></div>
+            <a href="/" class="logo"><Logo /></a>
             <div class="line"></div>
         </div>
     </header>
 
     <nav class="fixer">
-        
-        <div class="button h6" on:click|preventDefault={clickHandler}>
-            Menu
+
+        <div class="button menu-button h6" 
+            class:clicked={clicked} 
+            on:click="{() => clicked = !clicked}"
+            on:click|preventDefault={clickHandler}
+        >
+            <div>Menu</div>
+            <span></span>
+            <span></span>
         </div>
         <div class="icons-wrapper">
             <Icons />
@@ -93,6 +65,33 @@
         padding: 1.5rem 4.5vw 5rem;
     }
 
+    .fixer .button.menu-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .fixer .button.menu-button div {
+        margin-bottom: -.1rem;
+        color: var(--backgroundColor);
+    }
+    .fixer .button.menu-button span {
+        display: block;
+        width: 3rem;
+        height: 0.8px;
+        background-color: var(--backgroundColor);
+        transition: .4s ease-in-out;
+    }
+    .fixer .button.menu-button span:nth-of-type(2) {margin-top: .4rem;}
+
+    .fixer .button.menu-button.clicked span:nth-of-type(1) {
+        margin: 0.3rem 0 0;
+        transform: rotate(12deg);
+    }
+    .fixer .button.menu-button.clicked span:nth-of-type(2) {
+        transform: rotate(-12deg);
+        margin-top: -0.1rem;
+    }
+
 
     header {
         width: 100%;
@@ -118,6 +117,7 @@
         margin-left: -5vw;
         margin-top: 1.5rem;
     }
+
     
     header.top .logo path, header.top .logo rect {fill: white;}
 </style>

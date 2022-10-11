@@ -5,6 +5,9 @@ import type { MicroCMSObjectContent } from 'microcms-js-sdk';
 type Post = {
 	id: string;
 	title: string;
+	date: string;
+	content: HTMLElement;
+
 	description: string;
 	introduction: HTMLElement;
 	thumbnail: string;
