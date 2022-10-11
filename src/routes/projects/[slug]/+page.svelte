@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>{data.title}</title>
+	<title>{data.title} | TICS: Takumi Isobe Creative Studio</title>
 </svelte:head>
 <main>
 <article class="slug">

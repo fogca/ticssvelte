@@ -29,6 +29,7 @@ html, body {
     width: 100vw;
     overflow-x: hidden;
     background-color: var(--darkColor);
+    scroll-behavior: smooth;
 }
 
 /*GillSansMTPro-LightItalic / */

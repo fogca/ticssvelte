@@ -4,20 +4,38 @@
 </script>
 
 <svelte:head>
-	<title>Posts</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/base.css">
+	<title>Projects | TICS: Takumi Isobe Creative Studio</title>
 </svelte:head>
-<h1>Posts</h1>
+
+<main class="dark-mode">
+<section class="projects-index">
+<h1 class="h0 title" lang="en">Projects</h1>
 {#if data.contents}
-	<ul>
+	<div class="l-cards wrapper">
 		{#each data.contents as content}
-			<li>
-				<a href="/posts/{content.id}/" data-sveltekit-prefetch>
-                    <img src={content.thumbnail.url} class="thumbnail" alt="{content.title}">
-					{content.title}
-				</a>
-			</li>
+			<a href="/projects/{content.id}/" data-sveltekit-prefetch class="l-card">
+                <img src={content.thumbnail.url} class="thumbnail" alt="{content.title}">
+				<h2 class="title h2" lang="en">{content.title}</h2>
+				<h3 class="h5" style="opacity: .5;">{content.description}</h3>
+			</a>
 		{/each}
-	</ul>
+	</div>
 {/if}
+</section>
+</main>
+
+
+<style>
+	.projects-index {
+		margin-top: 10rem;
+		padding-top: 5rem;
+	}
+
+	.projects-index .wrapper {margin-top: 4rem;}
+	.projects-index .l-cards .l-card {margin-bottom: 6rem;}
+	.projects-index .l-cards .l-card img {
+		width: 100vw;
+		margin-left: -5vw;
+		aspect-ratio: 7/4;
+	}
+</style>

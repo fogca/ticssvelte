@@ -7,9 +7,12 @@ type Post = {
 	updatedAt: string;
 	publishedAt: string;
 	revisedAt: string;
-	title: string;
+	description: string;
 	thumbnail: string;
+	date: string;
+	url: string;
 	content: string;
+	title: string;
 };
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function load() {

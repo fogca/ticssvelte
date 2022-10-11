@@ -12,7 +12,7 @@ import { expoInOut, expoOut } from 'svelte/easing';
     <a href="/"><Logo /></a>
     
     <ul class="links">
-        <li in:fly={{ y: 10, delay: 0, duration: 2500, easing: expoInOut }}><a href="/#index-projects">Projects →</a></li>
+        <li in:fly={{ y: 10, delay: 0, duration: 2500, easing: expoInOut }}><a href="/projects">Projects →</a></li>
         <li in:fly={{ y: 10, delay: 50, duration: 2500, easing: expoInOut }}><a href="/about">About →</a></li>
         <li in:fly={{ y: 10, delay: 100, duration: 2500, easing: expoInOut }}><a href="/words">Words →</a></li>
         <li in:fly={{ y: 10, delay: 150, duration: 2500, easing: expoInOut }}><a href="/photography">Photography →</a></li>
@@ -38,7 +38,7 @@ import { expoInOut, expoOut } from 'svelte/easing';
     position: fixed;
     top: 0;
     left: 0;
-    background-image: url('../image/menu.webp');
+    background-image: url('../image/menu_bg.webp');
     background-size: cover;
     background-position: center;
     z-index: 98;
