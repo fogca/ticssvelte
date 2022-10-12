@@ -55,7 +55,7 @@
 	article.slug h1.title {font-size: 2.8rem;}
 	article.slug h2.description {margin: .5rem 0 4rem;}
 	article.slug p {
-		width: 92.5%;
+		width: 100%;
     	text-align: justify;
 	}
 

@@ -15,15 +15,15 @@ import { expoInOut, expoOut } from 'svelte/easing';
         <li in:fly={{ y: 10, delay: 0, duration: 2500, easing: expoInOut }}><a href="/projects">Projects →</a></li>
         <li in:fly={{ y: 10, delay: 50, duration: 2500, easing: expoInOut }}><a href="/about">About →</a></li>
         <li in:fly={{ y: 10, delay: 100, duration: 2500, easing: expoInOut }}><a href="/words">Words →</a></li>
-        <li in:fly={{ y: 10, delay: 150, duration: 2500, easing: expoInOut }}><a href="/photography">Photography →</a></li>
+        <li in:fly={{ y: 10, delay: 150, duration: 2500, easing: expoInOut }}><a href="/">Photography →</a></li>
 
         <li in:fly={{ y: 10, delay: 200, duration: 2500, easing: expoInOut }} class="contact">
             <div class="h6">Contact</div>
-            <a href="/photography">hi@takumiisobe.com</a>
+            <a href="/">hi@takumiisobe.com</a>
         </li>
         <li in:fly={{ y: 10, delay: 250, duration: 2500, easing: expoInOut }} class="contact">
             <div class="h6">Instagram</div>
-            <a href="/photography">@takumiisobe_</a>
+            <a href="/">@takumiisobe_</a>
         </li>
     </ul>
     <div class="menu-bg"></div>

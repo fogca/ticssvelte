@@ -9,18 +9,18 @@ import Logo from './Logo.svelte'
     </div>
     
     <ul class="links">
-        <li><a href="/#index-projects">Projects →</a></li>
+        <li><a href="/projects">Projects →</a></li>
         <li><a href="/about">About →</a></li>
         <li><a href="/words">Words →</a></li>
-        <li><a href="/photography">Photography →</a></li>
+        <li><a href="/">Photography →</a></li>
 
         <li class="contact">
             <div class="h6">Contact</div>
-            <a href="/photography">hi@takumiisobe.com</a>
+            <a href="/">hi@takumiisobe.com</a>
         </li>
         <li class="contact">
             <div class="h6">Instagram</div>
-            <a href="/photography">@takumiisobe_</a>
+            <a href="/">@takumiisobe_</a>
         </li>
     </ul>
     <div class="h6 copyright">©2022 TICS<br> 

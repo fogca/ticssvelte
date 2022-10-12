@@ -168,6 +168,7 @@
     		margin-top: 1rem;
 		}
 
+		#index-projects {margin-top: 18rem;}
 		#index-projects .l-cards {
 			width: 100%;
 			margin-left: 0;
@@ -215,7 +216,7 @@
 		#index-words .l-word {padding-left: 0;}
 		#index-words .l-words h1 {font-size: 2rem;}
 		#index-words .l-line {width: 62vw;}
-		#index-words .all {margin-left: 0;}
+		#index-words .all {margin-left: 0;margin-top: 6rem;}
 
 	}
 
