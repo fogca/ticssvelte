@@ -15,7 +15,10 @@
 
 <main>
 	<section id="index-top">
-		<img src="../image/kv.webp" alt="" class="kv">
+		<img src="../image/kv.webp" alt="" class="kv" style="display:none;">
+		<img src="../image/bg.webp" alt="" class="kv" style="display:none;">
+		<img src="../image/about.webp" alt="" class="kv sp">
+		<img src="../image/about-pc.webp" alt="" class="kv pc">
 		<div class="info">
 			<h1 class="h1 js-reaveler" lang="en">Tokyo based Design and <br>Photography Studio led by <br>Visual Director, Takumi Isobe <br>also runs a non-al brand, Nar.</h1>
 			<h2 class="h6">デザインや写真といった視覚領域においてディレクションや<br>構築をさせていただいています。 よろしくお願いいたします！</h2>
@@ -89,18 +92,6 @@
 	left: 5vw;
 }
 
-#index-top .info .main-tag {
-	font-size: 1.65rem;
-	letter-spacing: .05em;
-	line-height: 2.2;
-}
-#index-top .info p {
-	width: 65%;
-	margin-top: calc(32.5vh - 125px);
-	line-height: 2.2;
-	text-align: justify;
-}
-
 
 #index-projects {margin-top: 10rem;}
 #index-projects .l-cards {
@@ -168,48 +159,64 @@
 
 	@media screen and (min-width: 720px) {
 
-		#index-top {}
-		#index-top * {color: black;}
-
-		#index-top .info {position: initial;}
-		#index-top .info .main-tag {
-			font-size: 2rem;
-			margin-left: -2.5px;
+		#index-top .info {
+			top: 15vh;
+			left: 10vw;
 		}
-		#index-top .info p {
-			font-size: 1.4rem;
-			margin-top: 2rem;
-			margin-left: -.75px;
-			width: 57.5%;
-			text-align: justify;
-		}
-		#index-top .banner {
-			font-size: 2.8rem;
-    		top: 14rem;
-			left: 88.5vw;
-			line-height: 1.35;
+		#index-top h2 {
+			font-size: 1.6rem;
+    		margin-top: 1rem;
 		}
 
-
-
-		#index-brands {
-			padding-left: 10vw;
-			padding-right: 10vw;
-		}
-
-		.l-cards {
+		#index-projects .l-cards {
+			width: 100%;
+			margin-left: 0;
 			display: flex;
 			flex-wrap: wrap;
-    		justify-content: space-between;
-    		align-items: flex-start;
+			justify-content: space-between;
 		}
-		.l-cards .l-card {margin-top: 8rem;}
-		.l-cards .l-card:nth-of-type(1),
-		.l-cards .l-card:nth-of-type(4) {width: 35%;}
-		.l-cards .l-card:nth-of-type(2),
-		.l-cards .l-card:nth-of-type(3) {width: 60%;}
-		.l-cards .l-card:nth-of-type(2) img,
-		.l-cards .l-card:nth-of-type(3) img {aspect-ratio: 2/1;}
+		#index-projects .l-card {margin-bottom: 1rem;}
+
+		#index-projects .l-cards .l-card:nth-of-type(1) {
+			width: calc(65% - .5rem);
+			height: 32vw;
+		}
+		#index-projects .l-cards .l-card:nth-of-type(2) {
+			width: calc(35% - .5rem);
+			height: 20vw;
+		}
+		#index-projects .l-cards .l-card:nth-of-type(3) {
+			width: calc(28% - .66666666666rem);
+			height: 23vw;
+		}
+		#index-projects .l-cards .l-card:nth-of-type(4) {
+			width: calc(37% - .66666666666rem);
+			height: 23vw;
+		}
+		#index-projects .l-cards .l-card:nth-of-type(5) {
+			width: calc(35% - .66666666666rem);
+			height: 35vw;
+			margin-top: -12vw;
+		}
+		#index-projects .l-cards .l-card:nth-of-type(6) {
+			width: calc(60% - .5rem);
+			height: 28vw;
+		}
+		#index-projects .l-cards .l-card:nth-of-type(7) {
+			width: calc(40% - .5rem);
+			height: 28vw;
+		}
+
+		#index-words {
+			padding-top: 18rem;
+			padding-left: 18vw;
+			padding-right: 20vw;
+		}
+		#index-words .l-word {padding-left: 0;}
+		#index-words .l-words h1 {font-size: 2rem;}
+		#index-words .l-line {width: 62vw;}
+		#index-words .all {margin-left: 0;}
+
 	}
 
 	

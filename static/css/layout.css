@@ -1,6 +1,8 @@
 .dark-mode {background-color: var(--darkColor);}
 .dark-mode * {color: var(--backgroundColor);fill: var(--backgroundColor);}
 
+
+
 .l-word {
 	width: 100%;
 	display: flex;
@@ -19,3 +21,31 @@
 	margin-bottom: -0.5rem;
 }
 .l-word .date {margin-bottom: .8rem;}
+
+@media screen and (min-width: 720px) {
+
+	.l-section-head h2 {font-size: 1.6rem;}	
+	.l-word .right {margin-bottom: 0;}
+	
+	.l-word .left h1 {
+		width: fit-content;
+		position: relative;
+	}
+
+	.l-word:hover {opacity: .65;}
+	.l-word .left h1::after {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		content: '';
+		display: block;
+		width: 0;
+		height: 1px;
+		background-color: var(--backgroundColor);
+		transition: 1s cubic-bezier(.6,0,0,.9);
+	}
+	.l-word:hover .left h1::after {
+		width: 100%;
+	}
+
+}

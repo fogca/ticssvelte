@@ -53,9 +53,9 @@
 	.about-bg {
 		width: 100vw;
 		height: 100vh;
-		position: fixed;
 		top: 0;
 		left: 0;
+		position: fixed;
 		background-image: url('./image/about.webp');
 		background-position: center;
 		background-size: 100% 100%;

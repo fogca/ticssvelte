@@ -27,8 +27,7 @@
 
 <style>
 	.projects-index {
-		margin-top: 10rem;
-		padding-top: 5rem;
+		padding-top: 15rem;
 	}
 
 	.projects-index .wrapper {margin-top: 4rem;}

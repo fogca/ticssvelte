@@ -54,5 +54,13 @@
   height: auto;
 }
 
+@media screen and (min-width: 720px) {
+  
+  
+  .Logo {width: 17.5rem;}
+
+  
+}
+
 </style>
   

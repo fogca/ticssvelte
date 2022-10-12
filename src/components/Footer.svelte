@@ -51,4 +51,15 @@ import Logo from './Logo.svelte'
     footer ul.links li.contact {margin-bottom: 2.4rem;}
     footer ul.links li a {font-size: 2.4rem;}
     footer ul.links li.contact a {font-size: 1.8rem;}
+
+
+    @media screen and (min-width: 720px) {
+
+
+        footer {
+            padding: 0 10vw 5rem;
+        }
+
+    }
+
 </style>

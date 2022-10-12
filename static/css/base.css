@@ -80,9 +80,6 @@ img {
     object-position: 50%;
 }
 
-
-
-
 .uppercase {text-transform: uppercase;}
 
 .semitrans {opacity: .7;}
@@ -107,7 +104,7 @@ section {padding: 0 5vw;}
 @media screen and (min-width: 720px) {
     html {font-size: 55%;}
 
-    section {padding: 0 12.5vw;}
+    section {padding: 0 10vw;}
 }
 
 @media only screen and (min-width: 481px) and (max-width: 720px) {

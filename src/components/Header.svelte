@@ -118,6 +118,18 @@
         margin-top: 1.5rem;
     }
 
-    
-    header.top .logo path, header.top .logo rect {fill: white;}
+    @media screen and (min-width:720px) {
+        
+        
+        header {
+            width: 100%;
+            padding: 3.5rem 10vw 0;
+        }
+
+        header .line {
+            margin-left: -10vw;
+            margin-top: 2.5rem;
+        }
+
+    }
 </style>
