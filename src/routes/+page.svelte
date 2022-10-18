@@ -1,11 +1,9 @@
 <script>
-	import sal from 'sal.js';
 	import Arrow from '../components/Arrow.svelte';
+	import Saos from "saos";
 
 	/** @type {import('./$types').PageData} */
 	export let data;
-
-	sal();
 	
 </script>
 
@@ -19,24 +17,31 @@
 		<img src="../image/bg.webp" alt="" class="kv" style="display:none;">
 		<img src="../image/about.webp" alt="" class="kv sp">
 		<img src="../image/about-pc.webp" alt="" class="kv pc">
+		<Saos animation={"scroll-animation 1.5s cubic-bezier(0.3, 0, 0.7, 1) both"} once={true}>
 		<div class="info">
-			<h1 class="h1 js-reaveler" lang="en">Tokyo based Design and <br>Photography Studio led by <br>Visual Director, Takumi Isobe <br>also runs a non-al brand, Nar.</h1>
+			<h1 class="h1" lang="en">Tokyo based Design and <br>Photography Studio led by <br>Visual Director, Takumi Isobe <br>also runs a non-al brand, Nar.</h1>
 			<h2 class="h6">デザインや写真といった視覚領域においてディレクションや<br>構築をさせていただいています。 よろしくお願いいたします！</h2>
 		</div>
+		</Saos>
 	</section>
 	
 	<section id="index-projects">
+		<Saos animation={"scroll-animation 1.5s cubic-bezier(0.3, 0, 0.7, 1) both"} once={true}>
 		<div class="l-section-head">
 			<h1 class="h1 js-reaveler" lang="en">Projects I've involved</h1>
 			<h2 class="h6">携わらせていただいたお仕事</h2>
 		</div>
+		</Saos>
 	{#if data[0].contents}
 		<div class="wrapper l-cards">
 			{#each data[0].contents as content}
-				<a href="/projects/{content.id}/" data-sveltekit-prefetch class="container l-card">
-	                <img src={content.thumbnail.url} class="thumbnail" alt="{content.title}">
+				<a href="/projects/{content.id}/" data-sveltekit-prefetch class="container l-card">	
+					<Saos animation={"scroll-animation 1.5s cubic-bezier(0.3, 0, 0.7, 1) both"} once={true}>
+	                	<img src={content.thumbnail.url} class="thumbnail" alt="{content.title}">
+					</Saos>
 					<div class="h6 description" lang="en">{content.description}</div>
 					<h1 class="h6" lang="en">{@html content.title}</h1>
+					
 				</a>
 			{/each}
 		</div>
@@ -46,12 +51,15 @@
 
 	<section id="index-words">
 		<div class="l-section-head">
+			<Saos animation={"scroll-animation 1.5s cubic-bezier(0.3, 0, 0.7, 1) both"} once={true}>
 			<h1 class="h1" lang="en">Words</h1>
 			<h2 class="h6">文章: 学びと考え</h2>
+			</Saos>
 		</div>
 		{#if data[1].contents}
 		<div class="wrapper l-words">
 			{#each data[1].contents as content}
+				<Saos animation={"scroll-animation 1.5s cubic-bezier(0.3, 0, 0.7, 1) both"} once={true}>
 				<a href="/words/{content.id}/" data-sveltekit-prefetch class="l-word container">
 					<div class="left">
 						<div class="l-line"></div>
@@ -62,6 +70,7 @@
 						<Arrow />
 					</div>
 				</a>
+				</Saos>
 			{/each}
 		</div>
 		<div class="l-line"></div>
@@ -72,6 +81,11 @@
 </main>
 
 <style>
+
+@keyframes -global-scroll-animation {
+	0% {transform: translateY(1.5rem);opacity: 0;}
+	100% {transform: translateX(0);opacity: 1;}
+}
 
 #index-top {
 	width: 100vw;
@@ -105,18 +119,28 @@
 
 
 .l-card img {height: 100%;}
+/*
 #index-projects .l-card:nth-of-type(2),
 #index-projects .l-card:nth-of-type(3) {height: 40vw;}
 #index-projects .l-card:nth-of-type(5),
 #index-projects .l-card:nth-of-type(6) {height: 55vw;}
-
 #index-projects .l-card:nth-of-type(2),
 #index-projects .l-card:nth-of-type(6) {width: calc(40% - 2.5px);}
-
 #index-projects .l-card:nth-of-type(3),
 #index-projects .l-card:nth-of-type(5) {width: calc(60% - 2.5px);}
-
 #index-projects .l-card:nth-of-type(7) {aspect-ratio: 5/3;}
+*/
+
+#index-projects .l-cards .l-card:nth-of-type(1) {order: 1;width: 100%;height: 55vw;}
+#index-projects .l-cards .l-card:nth-of-type(2) {order: 2;width: calc(40% - 2.5px);height: 45vw;}
+#index-projects .l-cards .l-card:nth-of-type(4) {order: 3;width: calc(60% - 2.5px);height: 45vw;}
+#index-projects .l-cards .l-card:nth-of-type(6) {order: 4;width: 100%;height: 60vw;}
+#index-projects .l-cards .l-card:nth-of-type(3) {order: 5;width: calc(60% - 2.5px);height: 50vw;}
+#index-projects .l-cards .l-card:nth-of-type(5) {order: 6;width: calc(40% - 2.5px);height: 50vw;}
+#index-projects .l-cards .l-card:nth-of-type(7) {order: 7;width: 100%;height: 50vw;}
+
+
+
 
 
 
@@ -207,6 +231,10 @@
 			width: calc(40% - .5rem);
 			height: 28vw;
 		}
+
+		#index-projects .l-cards .l-card {order: 0 !important;}
+
+
 
 		#index-words {
 			padding-top: 18rem;

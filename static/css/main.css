@@ -1,5 +1,16 @@
 @charset "UTF-8";
 
+@keyframes -global-scroll-animation {
+	0% {
+	  transform: translateY(1.5rem);
+	  opacity: 0;
+	}
+	100% {
+	  transform: translateX(0);
+	  opacity: 1;
+	}
+}
+
 /*
 #index-first *,
 #index-second *,
@@ -38,6 +49,8 @@
 }
 
 .Index {background-color: var(--backgroundColor);}
+
+#index-projects .l-card div {height: inherit;}
 
 /* Archives/slug */
 /* Archives/slug */

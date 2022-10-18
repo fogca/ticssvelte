@@ -1,4 +1,5 @@
 <script>
+	import Saos from "saos";
 	/** @type {import('./$types').PageData} */
 	export let data;
 </script>
@@ -36,6 +37,7 @@
 
 
 <style>
+	@keyframes -global-scroll-animation {0% {transform: translateY(1.5rem);opacity: 0;}100% {transform: translateX(0);opacity: 1;}}
 	article.slug {
 		background-color: var(--darkColor);
 		padding-top: 12.5rem;

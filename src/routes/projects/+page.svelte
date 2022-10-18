@@ -1,4 +1,6 @@
 <script>
+	import Saos from "saos";
+
 	/** @type {import('./$types').PageData} */
 	export let data;
 </script>
@@ -13,11 +15,13 @@
 {#if data.contents}
 	<div class="l-cards wrapper">
 		{#each data.contents as content}
+		<Saos animation={"scroll-animation 1.5s cubic-bezier(0.3, 0, 0.7, 1) both"} once={true}>
 			<a href="/projects/{content.id}/" data-sveltekit-prefetch class="l-card">
                 <img src={content.thumbnail.url} class="thumbnail" alt="{content.title}">
 				<h2 class="title h2" lang="en">{content.title}</h2>
 				<h3 class="h5" style="opacity: .5;">{content.description}</h3>
 			</a>
+		</Saos>
 		{/each}
 	</div>
 {/if}
@@ -26,6 +30,8 @@
 
 
 <style>
+	@keyframes -global-scroll-animation {0% {transform: translateY(1.5rem);opacity: 0;}100% {transform: translateX(0);opacity: 1;}}
+	
 	.projects-index {
 		padding-top: 15rem;
 	}

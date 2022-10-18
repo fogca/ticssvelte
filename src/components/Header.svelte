@@ -1,6 +1,6 @@
 <script>
     import { slide } from 'svelte/transition';
-    
+    import Saos from "saos";
     import Logo from './Logo.svelte';
     import Menu from './Menu.svelte';
     import Icons from './Icons.svelte';
@@ -19,13 +19,15 @@
 
     <header class="top">
         <div class="head">
-            <a href="/" class="logo"><Logo /></a>
+            <Saos animation={"header-logo 1.5s cubic-bezier(0.3, 0, 0.7, 1) both"} once={true}>
+                <a href="/" class="logo"><Logo /></a>
+            </Saos>
             <div class="line"></div>
         </div>
     </header>
 
     <nav class="fixer">
-
+        <Saos animation={"header-logo 1.5s cubic-bezier(0.3, 0, 0.7, 1) both"} once={true}>
         <div class="button menu-button h6" 
             class:clicked={clicked} 
             on:click="{() => clicked = !clicked}"
@@ -35,8 +37,12 @@
             <span></span>
             <span></span>
         </div>
+        </Saos>
+
         <div class="icons-wrapper">
-            <Icons />
+            <Saos animation={"header-icon 1.5s cubic-bezier(0.3, 0, 0.7, 1) both"} once={true}>
+                <Icons />
+            </Saos>
         </div>
     </nav>
 
@@ -49,6 +55,11 @@
 
 
 <style>
+
+@keyframes -global-header-logo {
+	0% {transform: translateY(-.25rem);opacity: 0;}
+	100% {transform: translateX(0);opacity: 1;}
+}
 
 
     nav.fixer {
