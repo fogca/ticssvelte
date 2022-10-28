@@ -15,14 +15,20 @@
 	<section id="index-top">
 		<img src="../image/kv.webp" alt="" class="kv" style="display:none;">
 		<img src="../image/bg.webp" alt="" class="kv" style="display:none;">
-		<img src="../image/about.webp" alt="" class="kv sp">
-		<img src="../image/about-pc.webp" alt="" class="kv pc">
-		<Saos animation={"scroll-animation 1.5s cubic-bezier(0.3, 0, 0.7, 1) both"} once={true}>
-		<div class="info">
-			<h1 class="h1" lang="en">Tokyo based Design and <br>Photography Studio led by <br>Visual Director, Takumi Isobe <br>also runs a non-al brand, Nar.</h1>
-			<h2 class="h6">デザインや写真といった視覚領域においてディレクションや<br>構築をさせていただいています。 よろしくお願いいたします！</h2>
-		</div>
+		<Saos animation={"opening-img 1.5s cubic-bezier(0.3, 0, 0.7, 1) both"} once={true}>
+			<img src="../image/about.webp" alt="" class="kv sp">
 		</Saos>
+		<Saos animation={"opening-img 1.5s cubic-bezier(0.3, 0, 0.7, 1) both"} once={true}>
+			<img src="../image/about-pc.webp" alt="" class="kv pc">
+		</Saos>
+		<div class="info">
+			<Saos animation={"opening 2.2s cubic-bezier(0.4, 0, 0.6, 1) both"} once={true}>
+				<h1 class="h1" lang="en">Tokyo based Design and <br>Photography Studio led by <br>Visual Director, Takumi Isobe <br>also runs a non-al brand, Nar.</h1>
+			</Saos>
+			<Saos animation={"opening 2.2s cubic-bezier(0.4, 0, 0.6, 1) both"} once={true}>
+				<h2 class="h6">デザインや写真といった視覚領域においてディレクションや<br>構築をさせていただいています。 よろしくお願いいたします！</h2>
+			</Saos>
+		</div>
 	</section>
 	
 	<section id="index-projects">
@@ -40,8 +46,7 @@
 	                	<img src={content.thumbnail.url} class="thumbnail" alt="{content.title}">
 					</Saos>
 					<div class="h6 description" lang="en">{content.description}</div>
-					<h1 class="h6" lang="en">{@html content.title}</h1>
-					
+					<h1 class="h6" lang="en">{@html content.title}</h1>	
 				</a>
 			{/each}
 		</div>
@@ -85,6 +90,14 @@
 @keyframes -global-scroll-animation {
 	0% {transform: translateY(1.5rem);opacity: 0;}
 	100% {transform: translateX(0);opacity: 1;}
+}
+@keyframes -global-opening {
+	0% {transform: translateY(.5rem);opacity: 0;filter: blur(10px);}
+	100% {transform: translateX(0);opacity: 1;filter: blur(0);}
+}
+@keyframes -global-opening-img {
+	0% {filter: saturate(0);}
+	100% {filter: saturate(1);}
 }
 
 #index-top {

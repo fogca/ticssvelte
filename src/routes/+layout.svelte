@@ -6,6 +6,7 @@ import Footer from '../components/Footer.svelte';
 
 import { afterNavigate, beforeNavigate } from '$app/navigation';
 
+
 /** @type {import('./$types').LayoutData} */
     export let data;
     $: currentRoute = $page.url.pathname; 
